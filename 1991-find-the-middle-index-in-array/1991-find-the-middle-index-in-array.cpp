@@ -1,28 +1,21 @@
 class Solution {
 public:
-    int arrlsum(vector<int>arr,int x){
-        int sum=0;
-        for(int i=0;i<x;i++){
-            sum = sum + arr[i];
-        }
-    return sum;
-    }
 
-    int arrrsum(vector<int>arr,int x){
-        int sum=0;
-        for(int i=x+1;i<arr.size();i++){
-            sum = sum + arr[i];
-        }
-        return sum;
-    }
     int findMiddleIndex(vector<int>& arr) {
         int ans = -1;
+        vector<int>temp(arr.size());
+        int sum=0;
         for(int i=0;i<arr.size();i++){
-            int lsum = arrlsum(arr,i);
-            int rsum = arrrsum(arr,i);
+            sum = sum + arr[i];
+            temp[i]=sum;
+        }
+        int total = temp[temp.size()-1];
+        for(int i=0;i<arr.size();i++){
+            int lsum = temp[i]-arr[i];
+            int rsum = total-temp[i];
             if(lsum==rsum){
                  ans = i;
-                    break;
+                 break;
              }
             }
     return ans;
