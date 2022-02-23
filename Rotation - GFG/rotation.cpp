@@ -9,12 +9,10 @@ using namespace std;
 class Solution{
 public:	
 	int findKRotation(int arr[], int n) {
-	    // code here
 	  int low =0 , high = n-1;
       while(low<=high){
           int mid = low + (high-low)/2 ;
-          int prev = (mid-1 + n)  %n , next = (mid+1)%n;//if first element is mid or
-        //last element is mid then simply use 
+          int prev = (mid-1 + n)  %n , next = (mid+1)%n;
           if(arr[mid]<=arr[prev] && arr[mid]<=arr[next])
             return mid;
           else if (arr[mid]<=arr[high])
