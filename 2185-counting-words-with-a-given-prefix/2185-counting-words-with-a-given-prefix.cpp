@@ -9,10 +9,11 @@ public:
                     break;
                 }
                 temp+=1;
-            }
                 if(temp==pref.length()){
                      count+=1;
+                    break;
                 }
+            }
             }
         return count;
     }
