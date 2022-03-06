@@ -19,9 +19,6 @@ public:
     }
     
     int minCostClimbingStairs(vector<int>& cost) {
-        if(check(cost)){
-            return 0;
-        }
         
         int n = cost.size();
         vector<int>dp(n+1,0);
