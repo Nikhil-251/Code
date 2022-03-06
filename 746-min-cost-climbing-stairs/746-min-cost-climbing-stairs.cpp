@@ -5,19 +5,6 @@ public:
         return a<b?a:b;
     }
     
-    int check(vector<int>& cost){
-        int count=0;
-        for(int i=0;i<cost.size();i++){
-            if(cost[i]==0){
-                count+=1;
-            }
-        }
-        if(count==cost.size()){
-            return true;
-        }
-        return false;
-    }
-    
     int minCostClimbingStairs(vector<int>& cost) {
         
         int n = cost.size();
