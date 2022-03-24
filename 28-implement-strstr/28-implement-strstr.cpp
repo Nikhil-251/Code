@@ -8,6 +8,9 @@ public:
         if(needle==""){
             return 0;
         }
+        if(haystack==""){
+            return -1;
+        }
         for(int i=0;i<=n-m;i++){
             int j;
             for(j=0;j<m;j++){
