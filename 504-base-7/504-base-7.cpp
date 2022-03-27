@@ -2,12 +2,9 @@ class Solution {
 public:
     string conv(int num){
         string result="";
-        while(num>=7){
+        while(num>0){
             result = to_string(num%7)+ result;
             num = num / 7;
-        }
-        if(num>0){
-            result = to_string(num%7)+ result;
         }
             
           return result; 
