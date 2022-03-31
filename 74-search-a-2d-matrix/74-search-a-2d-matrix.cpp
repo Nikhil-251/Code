@@ -6,9 +6,19 @@ public:
             for(int j=0;j<matrix[i].size();j++)
                 v.push_back(matrix[i][j]);
         }
-        for(int i=0;i<v.size();i++)
-            if(target==v[i])
+        int l = 0,r= v.size()-1;
+        while(l<=r){
+            int mid = l + (r-l)/2;
+            if(v[mid]==target){
                 return true;
+            }
+            else if(v[mid]>target){
+                r = mid - 1;
+            }
+            else{
+                l = mid + 1;
+            }
+        }
         return false;
     }
 };
