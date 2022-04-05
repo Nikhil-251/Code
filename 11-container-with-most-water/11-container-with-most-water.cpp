@@ -7,7 +7,7 @@ public:
         while(left<=right){
             ans = max(min(arr[left],arr[right])*(right-left),ans);
             if(arr[left]<arr[right]){
-                left++;
+                left+=1;
             }
             else{
                 right-=1;
