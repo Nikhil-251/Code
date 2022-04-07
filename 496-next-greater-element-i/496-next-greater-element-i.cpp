@@ -21,14 +21,11 @@ public:
             mp.insert(make_pair(nums2[i],ngr[i]));
         }
  
-        vector<int>ans(nums1.size());
+        vector<int>ans(nums1.size(),-1);
         
         for(int i =0; i<nums1.size();i++){
-            if(mp.find(nums1[i])==mp.end()){
-                ans[i]=-1;
-            }
-            else{
-                ans[i] = mp[nums1[i]];
+            if(mp.find(nums1[i])!=mp.end()){
+                 ans[i] = mp[nums1[i]];
             }
         }
         return ans;
