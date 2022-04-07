@@ -3,15 +3,10 @@ public:
     vector<vector<int>> minimumAbsDifference(vector<int>& arr) {
         int n = arr.size();
         sort(arr.begin(),arr.end());
-        vector<int>v1;
-        for(int i=0;i<n-1;i++){
-            int temp = arr[i+1]-arr[i];
-            v1.push_back(temp);
-        }
         int min = INT_MAX;
-        for(int i=0;i<v1.size();i++){
-            if(min>v1[i]){
-                min=v1[i];
+        for(int i=0;i<n-1;i++){
+            if(min>arr[i+1]-arr[i]){
+                min=arr[i+1]-arr[i];
             }
         }
         
