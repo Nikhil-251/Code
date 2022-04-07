@@ -7,7 +7,6 @@ public:
         for(int i=0;i<n-1;i++){
             int temp = arr[i+1]-arr[i];
             v1.push_back(temp);
-            cout<<temp<<endl;
         }
         int min = INT_MAX;
         for(int i=0;i<v1.size();i++){
