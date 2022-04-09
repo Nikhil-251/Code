@@ -14,7 +14,6 @@ public:
                     ans[j] = i.first;
                     t1 = i.first;
                     max = i.second;
-                    cout<<i.first<<" "<<i.second<<endl;
                 }
             }
             mp.erase(t1);
