@@ -5,6 +5,7 @@ public:
             return grid;
         }
         int m = grid.size(),n = grid[0].size();
+        k = k%(n*m);
         vector<vector<int>>ans(m,vector<int>(n, 0));
         while(k--){
             for(int i=0;i<m;i++){
