@@ -1,29 +1,22 @@
 class Solution {
 public:
     vector<int> sortArrayByParityII(vector<int>& nums) {
-        priority_queue<int>even,odd;
-        for(auto i:nums){
-            if(i%2==0){
-                even.push(i);
+        int n=nums.size();
+        vector<int>ans(n);
+        int ec=0,oc=1;
+        for(int i=0;i<n;i++)
+        {
+            if(nums[i]%2==0)
+            {
+                ans[ec]=nums[i];
+                ec+=2;
             }
-            else{
-                odd.push(i);
+            else
+            {
+                ans[oc]=nums[i];
+                oc+=2;
             }
         }
-        int i=0,n = (nums.size()/2);
-        while(!even.empty()){
-            nums[i] = even.top();
-            // cout<<nums[i]<<" ";
-            even.pop();
-            i+=2;
-        }
-        int j=1;
-        while(!odd.empty()){
-            nums[j] = odd.top();
-            // cout<<nums[j]<<" ";
-            odd.pop();
-            j+=2;
-        }
-        return nums;
+        return ans;
     }
 };
