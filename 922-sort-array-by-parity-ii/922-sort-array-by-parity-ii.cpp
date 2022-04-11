@@ -13,14 +13,14 @@ public:
         int i=0,n = (nums.size()/2);
         while(!even.empty()){
             nums[i] = even.top();
-            cout<<nums[i]<<" ";
+            // cout<<nums[i]<<" ";
             even.pop();
             i+=2;
         }
         int j=1;
         while(!odd.empty()){
             nums[j] = odd.top();
-            cout<<nums[j]<<" ";
+            // cout<<nums[j]<<" ";
             odd.pop();
             j+=2;
         }
