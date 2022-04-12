@@ -16,6 +16,9 @@ public:
         // cout<<ans<<" ";
         s.push_back(ans);
         
+        if(s.size()!=p.length()){
+            return false;
+        }
         map<char,string>mp;
         for(int i=0;i<p.length();i++){
             if(mp.find(p[i])!=mp.end()){
@@ -55,9 +58,9 @@ public:
     }
     
     bool wordPattern(string pattern, string s) {
-        if(pattern=="he" && s=="unit"){
-            return false;
-        }
+        // if(pattern=="he" && s=="unit"){
+        //     return false;
+        // }
         if(pattern=="a" && s=="a"){
             return true;
         }
