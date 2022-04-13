@@ -1,33 +1,35 @@
 class Solution {
 public:
+    bool isvalidneighbour(int x,int y,vector<vector<int>>board){
+        return x>=0 && x<board.size() && y>=0 && y<board[0].size();
+    }
     void gameOfLife(vector<vector<int>>& board) {
-        int n = board.size(), m = board[0].size();
-        for(int i=0; i<n; i++){
-            for(int j=0; j<m; j++){
-                int count=0;
-                
-                //check for top row elements
-                if(i>0 && j>0 && board[i-1][j-1]>=1) count++; //top left
-                if(j>0 && board[i][j-1]>=1) count++; //top
-                if(i<n-1 && j>0 && board[i+1][j-1]>=1) count++; //top right
-                
-                //check for current row elemnents 
-                if(i>0 && board[i-1][j]>=1) count++; //left
-                if(i<n-1 && board[i+1][j]>=1) count++; //right
-                
-                //check for down row elemnents 
-                if(i>0 && j<m-1 && board[i-1][j+1]>=1) count++; //down left
-                if(j<m-1 && board[i][j+1]>=1) count++; //down
-                if(i<n-1 && j<m-1 && board[i+1][j+1]>=1) count++; //down right
-
-                if(board[i][j]==1 && (count<2 || count>3)) board[i][j]=2;
-                if(board[i][j]==0 && count==3) board[i][j]=-2;     
+        vector<int>dx = {0,0,1,1,1,-1,-1,-1};
+        vector<int>dy = {1,-1,1,-1,0,0,1,-1};
+        
+        for(int row=0;row<board.size();row++){
+            for(int col=0;col<board[0].size();col++){
+                int cln=0;
+                for(int i=0;i<8;i++){
+                    int curr_x = row + dx[i],curr_y = col + dy[i];
+                    if(isvalidneighbour(curr_x,curr_y,board) && abs(board[curr_x][curr_y])==1)
+                        cln+=1;
+                }
+                if(board[row][col]==1 && (cln<2 || cln>3))
+                    board[row][col] = -1;
+                if(board[row][col]==0 && cln==3)
+                    board[row][col] = 2;
             }
         }
-         for(int i=0; i<board.size(); i++){
-            for(int j=0; j<board[0].size(); j++){
-                if(board[i][j]==2) board[i][j]=0;
-                if(board[i][j]==-2) board[i][j]=1;
+        
+        for(int r=0;r<board.size();r++){
+            for(int c=0;c<board[0].size();c++){
+                if(board[r][c]>=1){
+                    board[r][c]=1;
+                }
+                else{
+                    board[r][c]=0;
+                }
             }
         }
     }
