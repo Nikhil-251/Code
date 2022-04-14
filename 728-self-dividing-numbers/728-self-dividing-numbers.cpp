@@ -4,7 +4,6 @@ public:
         vector<int>ans;
         
         for(int i=left;i<=right;i++){
-            vector<int>temp;
             int n=i;
             while(n>0){
                 int digit = n%10;
