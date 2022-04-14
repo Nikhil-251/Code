@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<bool> prefixesDivBy5(vector<int>& nums) {
-        string s="";
+        // string s="";
         vector<bool>ans;
         int dec=0;
         for(int i=0;i<nums.size();i++){
