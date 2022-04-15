@@ -5,7 +5,6 @@ public:
         for(int i=0;i<nums.size()-1;i++){
             if(nums[i]==key){
                 mp[nums[i+1]]++;
-                cout<<mp[nums[i+1]]<<endl;
             }
         }
         int ans=0,count=0;
