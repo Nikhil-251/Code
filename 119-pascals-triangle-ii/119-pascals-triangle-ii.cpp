@@ -9,11 +9,6 @@ public:
                 p[i][j] = p[i-1][j-1] + p[i-1][j];
             }
         }
-        
-        vector<int>ans;
-        for(int j=0;j<row+1;j++){
-            ans.push_back(p[row][j]);
-        }
-        return ans;
+        return p[row];
     }
 };
