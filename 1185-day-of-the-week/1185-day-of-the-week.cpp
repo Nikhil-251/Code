@@ -16,12 +16,16 @@ public:
         int year1 = 1970, month1 = 1, day1 = 1;
         while (year1 != year){
             bool b = isleapyear(year1);
-            if (b) count += 366;
-            else count += 365;
+            if(b) 
+                count += 366;
+            else 
+                count += 365;
             year1++;
         }
         int b = isleapyear(year1) ? 0 : 1;
-        for (int i = 0; i < month - 1; i++) count += daysOfMonth[b][i];
+        for (int i = 0; i < month - 1; i++){
+            count += daysOfMonth[b][i];
+        }
         count += day - 1;
         return count;
     }
