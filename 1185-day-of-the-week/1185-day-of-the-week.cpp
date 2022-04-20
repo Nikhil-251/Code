@@ -31,9 +31,9 @@ public:
     }
     
     string dayOfTheWeek(int day, int month, int year) {
-        int days1 = daystill1971(2019, 9, 8);//today(2019,9,8) is Sunday
+        int days1 = daystill1971(2019, 9, 8);
         int days2 = daystill1971(year, month, day);
-        int days = (((days2 - days1) % 7) + 7) % 7;//Number of days off
+        int days = (((days2 - days1) % 7) + 7) % 7;
         return weekName[days];
     }
 };
