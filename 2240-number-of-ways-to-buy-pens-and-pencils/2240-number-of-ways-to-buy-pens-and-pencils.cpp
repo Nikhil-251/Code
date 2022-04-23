@@ -6,7 +6,7 @@ public:
             val = total-cost1*i;
             if(val<0)
                 break;
-            ans+= (long long)floor((long)val/(long)cost2)+1;
+            ans+= (long)floor((long)val/(long)cost2)+1;
         }
         return ans;
     }
