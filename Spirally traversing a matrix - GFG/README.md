@@ -5,7 +5,7 @@
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
-<pre><span style="font-size:18px"><strong>Input</strong>:
+<pre style="position: relative;"><span style="font-size:18px"><strong>Input</strong>:
 r = 4, c = 4
 matrix[][] = {{1, 2, 3, 4},
 &nbsp;          {5, 6, 7, 8},
@@ -14,11 +14,11 @@ matrix[][] = {{1, 2, 3, 4},
 <strong>Output</strong>: 
 1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10
 <strong>Explanation</strong>:
-</span><img alt="" src="https://www.geeksforgeeks.org/wp-content/uploads/spiral-matrix.png" style="height:242px; width:400px" class="img-responsive"></pre>
+</span><img alt="" src="https://www.geeksforgeeks.org/wp-content/uploads/spiral-matrix.png" style="height:242px; width:400px" class="img-responsive"><div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
 
 <p><span style="font-size:18px"><strong>Example 2:</strong></span></p>
 
-<pre><span style="font-size:18px"><strong>Input</strong>:
+<pre style="position: relative;"><span style="font-size:18px"><strong>Input</strong>:
 r = 3, c = 4  
 matrix[][] = {{1, 2, 3, 4},
 &nbsp;          {5, 6, 7, 8},
@@ -29,7 +29,7 @@ matrix[][] = {{1, 2, 3, 4},
 Applying same technique as shown above, 
 output for the 2nd testcase will be 
 1 2 3 4 8 12 11 10 9 5 6 7.</span>
-</pre>
+<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
 
 <p><br>
 <strong><span style="font-size:18px">Your Task:</span></strong><br>
