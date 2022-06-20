@@ -118,8 +118,8 @@ class Solution {
         Node* r = node->right;
         node->left = r;
         node->right = l;
-        mirror(node->left);
         mirror(node->right);
+        mirror(node->left);
     }
 };
 
